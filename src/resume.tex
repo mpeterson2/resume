@@ -1,130 +1,71 @@
-\documentclass[letterpaper,10pt]{article}
-
-%A Few Useful Packages
-\usepackage{marvosym}
-\usepackage{fontspec} 					%for loading fonts
-\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
-\RequirePackage{color,graphicx}
-\usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[big]{layaureo} 				%better formatting of the A4 page
-% an alternative to Layaureo can be ** \usepackage{fullpage} **
-\usepackage{supertabular} 				%for Grades
-\usepackage{titlesec}					%custom \section
-%Setup hyperref package, and colours for links
-\usepackage{hyperref}
-\definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
-
-%FONTS
-\defaultfontfeatures{Mapping=tex-text}
-%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
-%%% modified for Karol Kozioł for ShareLaTeX use
-%\setmainfont[
-%SmallCapsFont = Fontin-SmallCaps.otf,
-%BoldFont = Fontin-Bold.otf,
-%ItalicFont = Fontin-Italic.otf
-%]
-%{Fontin.otf}
-%%%
-
-%CV Sections inspired by:
-%http://stefano.italians.nl/archives/26
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{3pt}{3pt}
-%Tweak a bit the top margin
-%\addtolength{\voffset}{-1.3cm}
-
-%Italian hyphenation for the word: ''corporations''
-\hyphenation{im-pre-se}
-
-%-------------WATERMARK TEST [**not part of a CV**]---------------
-\usepackage[absolute]{textpos}
-
-\setlength{\TPHorizModule}{30mm}
-\setlength{\TPVertModule}{\TPHorizModule}
-\textblockorigin{2mm}{0.65\paperheight}
-\setlength{\parindent}{0pt}
-
-\geometry{margin=0.7in}
-
-%--------------------BEGIN DOCUMENT----------------------
+\documentclass{resume}
 \begin{document}
 
-    \pagestyle{empty} % non-numbered pages
+  \name{Michael Peterson}
 
-    \font\fb=''[cmr10]'' %for use with \LaTeX command
+  2830 St Andrews Court \hfill
+  \href{http://mpeterson2.github.io/}{mpeterson2.github.io} \\
+  Waukesha, WI 53188 \hfill
+  \href{https://github.com/mpeterson2}{github.com/mpeterson2} \\
+  (262) 894-8034 \hfill
+  \href{mailto:mpeterson4@carthage.edu}{mpeterson4@carthage.edu}
 
-    %--------------------TITLE-------------
-    \par{\centering
-    		{\Huge \textsc{Michael Peterson}
-    	}\bigskip\par}
+  \section{Education}
+  \begin{tabularx}{\linewidth}{r|X}
+    \education{Carthage College}{Kenosha, Wisconsin}{September 2011}{May 2015}{
+      Pursuing a Bachelor of Arts Degree in Computer Science
+    }
+  \end{tabularx}
+  \vspace{-2em}
 
-    %--------------------INFO--------------
+  \section{Languages and Tools}
+    \begin{itemize}
+      \item Have substantial experience with Java, Dart, JavaScript and C++.
+      \item Have some experience with Ruby, Python, Go, C\#, CoffeeScript and Clojure.
+      \item Have experience with Linux, Sublime Text, Atom, Eclipse, Visual Studio, Intellij, Git, Mercurial and more.
+    \end{itemize}
 
-        2830 St Andrews Court \hfill
-        \href{http://mpeterson2.github.io/}{mpeterson2.github.io} \\
-        Waukesha, WI 53188 \hfill
-        \href{https://github.com/mpeterson2}{github.com/mpeterson2} \\
-        (262) 894-8034 \hfill
-        \href{mailto:mpeterson4@carthage.edu}{mpeterson4@carthage.edu} \\
-
-    %--------------------SECTIONS-----------------------------------
-
-    %Section: Education
-    \section{Education}
-    \begin{tabular}{r|p{13.9cm}}
-
-     \textsc{September 2011} & \textsc{Carthage College - Kenosha, Wisconsin} \\
-     \textsc{May 2015} &
-     Pursuing a Bachelor of Arts Degree in Computer Science\\\multicolumn{2}{c}{}\\
-
-    \end{tabular}
-
-    %Section: Languages and Tools
-    \section{Languages and Tools}
-      \begin{itemize}
-        \item Have substantial experience with Java, Dart, JavaScript and C++.
-        \item Have some experience with Ruby, Python, Go, C\#, CoffeeScript and Clojure.
-        \item Have experience with Linux, Sublime Text, Atom, Eclipse, Visual Studio, Intellij, Git, Mercurial and more.
-      \end{itemize}
-
-    %Section: Projects
     \section{Projects - More at \href{http://mpeterson2.github.io}{mpeterson2.github.io}}
 
-        \textsc{Turbo Wookie} -     \href{https://github.com/turbowookie/turbo-wookie}{github.com/turbowookie/turbo-wookie} \\
+      \project{Turbo Wookie}{https://github.com/turbowookie/turbo-wookie}{
         Turbo Wookie is a collaborative jukebox; a group of people can start up a Turbo Wookie instance, share the address amongst themselves, and build a playlist that they'll be able to listen to concurrently.
+      }
 
-        \textsc{java-httpserver} -  \href{https://github.com/storytellersoftware/java-httpserver}{https://github.com/storytellersoftware/java-httpserver} \\
-        A HTTP Server written in Java. Our goal was to give developers an easy to use API to create a RESTful web server using Java.
+      \project{java-httpserver}{https://github.com/storytellersoftware/java-httpserver}{
+        An HTTP Server written in Java. Our goal was to give developers an easy to use API to create a RESTful web server using Java.
+      }
 
-        \textsc{Save Session} - \href{https://github.com/mpeterson2/save-session}{github.com/mpeterson2/save-session} \\
+      \project{Save Session}{https://github.com/mpeterson2/save-session}{
         Save Session is a highly configurable package for the Atom text editor that remembers previous sessions. It automatically restores any files whether they is saved to disk or not, projects, window information and more.
+      }
 
-    %Section: Work Experience
     \section{Work Experience}
-    \begin{tabular}{r|p{13.9cm}}
+    \begin{tabularx}{\linewidth}{r|X}
+      \work{Software Developer Intern}{Cars.com}{September 2014}{December 2015}{
+        Built a web application using the Spring Framework to allow Cars.com developers to query and retrieve images from three separate databases through a single request; worked on the backend team to create a search engine optimized application for vehicle recall information.
+      }
 
-     \textsc{September 2014} & Software Developer Intern at \textsc{Cars.com}
-     \\\textsc{December 2015}
-     &\small{Built a web application using the Spring Framework to allow Cars.com developers to query and retrieve images from three separate databases through a single request; worked on the backend team to create a search engine optimized application for vehicle recall information.} \\\multicolumn{2}{c}{}\\
+      \work{Computer Science Researcher}{North Carolina State University}{June 2014}{August 2014}{
+        Researched trust in recommendation systems in order to recommend items to users from their most trusted peers; wrote papers on trust and video capture performance between various different file formats; wrote a web app to help students peer review each other's papers by automatically keeping track of their suggestions with GitHub issues -  \href{http://pdfreviewhub.appspot.com}{pdfreviewhub.appspot.com}
+      }
 
-     \textsc{June 2014} & Computer Science Researcher at \textsc{North Carolina State University}
-     \\\textsc{August 2014}
-     &\small{Researched trust in recommendation systems in order to recommend items to users from their most trusted peers; wrote papers on trust and video capture performance between various different file formats; wrote a web app to help students peer review each other's papers by automatically keeping track of their suggestions with GitHub issues -  \href{http://pdfreviewhub.appspot.com}{pdfreviewhub.appspot.com}} \\\multicolumn{2}{c}{}\\
+      \work{Tutor/Student Instructor}{Carthage College}{September 2013}{May 2014}{
+        Tutored students in computer science classes.
+      }
 
-     \textsc{September 2013} & Tutor/Student Instructor at \textsc{Carthage College} \\\textsc{May 2014}
-     &\small{Tutored students in computer science classes.}\\\multicolumn{2}{c}{} \\
+      \work{Software Developer}{Storyteller Software}{June 2013}{December 2013}{
+        Recreated the frontend, using Javascript, to create a more maintainable code base; recreated the backend's Java HTTP server to use a RESTful API; introduced the project to other students.
+      }
 
-     \textsc{June 2013} & Software Developer at \textsc{Storyteller Software} \\\textsc{December 2013}
-     &\small{\href{http://www.storytellersoftware.com/}{storytellersoftware.com}} \\
-     &\small{Recreated the frontend, using Javascript, to create a more maintainable code base; recreated the backend's Java HTTP server to use a RESTful API; introduced the project to other students.} \\\multicolumn{2}{c}{} \\
+      \work{Overnight Stocker}{Walmart}{May 2012}{September 2012}{
+        Stocked shelves and helped customers with electronics.
+      }
 
-     \textsc{May 2012} & Overnight Stocker at \textsc{Walmart} \\\textsc{September 2012}
-     &\small{Stocked shelves and helped customers with electronics.}\\\multicolumn{2}{c}{} \\
+      \work{Crew Member}{Wendy's}{June 2009}{September 2011}{
+        Worked at every position.
+      }
 
-     \textsc{June 2009} & Crew Member at \textsc{Wendy's} \\\textsc{September 2011}
-     &\small{Worked at every position.}\\\multicolumn{2}{c}{} \\
-
-    \end{tabular}
+    \end{tabularx}
+    \vspace{-2em}
 
 \end{document}
