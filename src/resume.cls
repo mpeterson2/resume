@@ -18,10 +18,10 @@
 % Info
 \newcommand{\info}[9]{
   \begin{tabularx}{\textwidth}{l @{\extracolsep{\fill}} r}
-  \multirow{2}{*}{\shortstack[l]{#1 \\[3pt] #2}}
+  \multirow{2}{*}{\shortstack[l]{#1 \\ #2}}
   & \href{#4}{#5} \\
   & \href{#6}{#7} \\
-  #3 & \href{#8}{#9}
+  #3 & \href{#8}{#9} \\
   \end{tabularx}
 }
 
